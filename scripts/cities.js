@@ -67,7 +67,7 @@ document.querySelector("#city").addEventListener("change", function () {
   document.getElementById("results").innerHTML = null;
 
   fetch(
-    `https://ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date)`
+    `https://ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date,description)`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -81,11 +81,14 @@ document.querySelector("#city").addEventListener("change", function () {
 });
 
 const trendingSecond = (value) => {
-  value.forEach(({ headline, image_url }) => {
+  value.forEach(({ headline, image_url , description, posted_date}) => {
     // document.getElementById('results').innerHTML = null;
 
     let box = document.createElement("div");
     box.setAttribute("class", "trendBox2");
+    
+    let contBox = document.createElement('div')
+    contBox.setAttribute('class', 'contBox2')
 
     let img = document.createElement("img");
     img.setAttribute('class','imgBox2')
@@ -93,10 +96,19 @@ const trendingSecond = (value) => {
     img.style.height = "108px";
     img.style.width = "144px";
 
-    let title = document.createElement("p");
+
+    let title = document.createElement("h4");
     title.textContent = headline;
 
-    box.append(img, title);
+    let date = document.createElement('p')
+    date.setAttribute('class', 'date')
+    date.textContent = `Date: ${posted_date}`;
+
+    let summary = document.createElement('p')
+    summary.textContent = description;
+
+    contBox.append(title,date,summary)
+    box.append(img, contBox);
     document.querySelector("#results").append(box);
   });
 };
@@ -104,7 +116,7 @@ const trendingSecond = (value) => {
 //default data display
 
 fetch(
-  `https://ndtvnews-api.herokuapp.com/cities?city=values(delhi)&field=values(headline,image_url,posted_date)`
+  'https://ndtvnews-api.herokuapp.com/cities?city=values(delhi)&field=values(headline,image_url,posted_date)'
 )
   .then((response) => response.json())
   .then((data) => {
