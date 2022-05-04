@@ -9,7 +9,6 @@ addFunctionality();
 
 // top-headlines url --> https://newsapi.org/v2/top-headlines?country=in&apiKey=2e2559eea1d142e5bb73a5e4ed589315
 
-
 //Trending data
 
 const trending = async () => {
@@ -20,41 +19,41 @@ const trending = async () => {
     let response = await fetch(url);
 
     let data = await response.json();
-    let x = data.articles
+    let x = data.articles;
     console.log("Trending", x);
-    appendTrending(x)
+    appendTrending(x);
   } catch (error) {
     console.log("Error", error);
   }
 };
 
 const appendTrending = (value) => {
-    value.forEach(el => {
-        let box = document.createElement('div')
-        box.setAttribute('class', 'trendingBox')
+  value.forEach((el) => {
+    let box = document.createElement("div");
+    box.setAttribute("class", "trendingBox");
 
-        let imgBox = document.createElement('div')
-        imgBox.style.height = '50px'
-        imgBox.style.width = '60px'
+    let imgBox = document.createElement("div");
+    imgBox.style.height = "50px";
+    imgBox.style.width = "60px";
 
-        let contBox = document.createElement('div')
-        contBox.setAttribute('class', 'contBox')
+    let contBox = document.createElement("div");
+    contBox.setAttribute("class", "contBox");
 
-        let img = document.createElement('img')
-        img.src = el.urlToImage;
-        img.style.height = '52px'
-        img.style.width = '60px'
+    let img = document.createElement("img");
+    img.src = el.urlToImage;
+    img.style.height = "52px";
+    img.style.width = "60px";
 
-        let title = document.createElement('p')
-        title.textContent = el.description
+    let title = document.createElement("p");
+    title.textContent = el.description;
 
-        let hr = document.createElement('hr')
+    let hr = document.createElement("hr");
 
-        imgBox.append(img)
-        contBox.append(title)
-        box.append(imgBox, contBox)
-        document.querySelector('#resultTrending').append(box, hr)
-    });
+    imgBox.append(img);
+    contBox.append(title);
+    box.append(imgBox, contBox);
+    document.querySelector("#resultTrending").append(box, hr);
+  });
 };
 
 trending();
@@ -65,15 +64,15 @@ document.querySelector("#city").addEventListener("change", function () {
   a = document.querySelector("#city").value;
   console.log(a);
 
-  document.getElementById('results').innerHTML = null;
-     
+  document.getElementById("results").innerHTML = null;
+
   fetch(
     `https://ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date)`
   )
     .then((response) => response.json())
     .then((data) => {
       let x = data.news[0].articles;
-      console.log('City Data',x);
+      console.log("City Data", x);
       trendingSecond(x);
     })
     .catch((error) => {
@@ -81,24 +80,37 @@ document.querySelector("#city").addEventListener("change", function () {
     });
 });
 
-
 const trendingSecond = (value) => {
-    value.forEach(({headline, image_url}) => {
+  value.forEach(({ headline, image_url }) => {
+    // document.getElementById('results').innerHTML = null;
 
-        // document.getElementById('results').innerHTML = null;
+    let box = document.createElement("div");
+    box.setAttribute("class", "trendBox2");
 
-        let box = document.createElement('div')
-        box.setAttribute('class', 'trendBox2')
+    let img = document.createElement("img");
+    img.src = image_url;
+    img.style.height = "108px";
+    img.style.width = "144px";
 
-        let img = document.createElement('img')
-        img.src = image_url;
-        img.style.height = '108px'
-        img.style.width = '144px'
+    let title = document.createElement("p");
+    title.textContent = headline;
 
-        let title = document.createElement('p')
-        title.textContent = headline;
+    box.append(img, title);
+    document.querySelector("#results").append(box);
+  });
+};
 
-        box.append(img, title)
-        document.querySelector('#results').append(box)
-    });
-}
+//default data display
+
+fetch(
+  `https://ndtvnews-api.herokuapp.com/cities?city=values(delhi)&field=values(headline,image_url,posted_date)`
+)
+  .then((response) => response.json())
+  .then((data) => {
+    let x = data.news[0].articles;
+    console.log("City Data", x);
+    trendingSecond(x);
+  })
+  .catch((error) => {
+    console.log("Error", error);
+  });
