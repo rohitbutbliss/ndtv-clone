@@ -1,5 +1,5 @@
 const navbar = () => {
-    return `<div id="logo">
+  return `<div id="logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,21 +47,21 @@ const navbar = () => {
       <div id="options">
         <ul>
           <li>LIVE TV</li>
-          <li>LATEST</li>
+          <li id="latest">LATEST</li>
           <li>COVID</li>
-          <li>INDIA</li>
+          <li id="india">INDIA</li>
           <li>OPINION</li>
           <li>VIDEO</li>
           <li>CITIES</li>
-          <li>WORLD</li>
-          <li>OFFBEAT</li>
+          <li id="world">WORLD</li>
+          <li id="offbeat">OFFBEAT</li>
           <li>TRENDS</li>
           <li>PHOTOS</li>
         </ul>
         <ul id="hide" class="show">
           <li>SOUTH</li>
           <li>PEOPLE</li>
-          <li>SCIENCE</li>
+          <li id="science">SCIENCE</li>
           <li>PHOTOS</li>
           <li>JOBS</li>
           <li>WEATHER</li>
@@ -141,7 +141,7 @@ const navbar = () => {
 }
 
 const footer = () => {
-    return `<div id="lhs">
+  return `<div id="lhs">
         <img
           id="footer-logo"
           src="https://drop.ndtv.com/homepage/images/ndtvlogo23march.png"
@@ -289,8 +289,32 @@ const footer = () => {
 }
 
 const addFunctionality = () => {
-    document.querySelector("#three-dots").addEventListener("click", () => {
-        document.querySelector("#hide").classList.toggle("show");
-    });
+  document.querySelector("#three-dots").addEventListener("click", () => {
+    document.querySelector("#hide").classList.toggle("show");
+  });
+
+  document.querySelector("#navbar #logo").addEventListener("click", () => {
+    window.location.href = "../index.html";
+  })
+  document.querySelector("#navbar #latest").addEventListener("click", () => {
+    localStorage.setItem("newsQuery", JSON.stringify(["Latest News", "latest"]));
+    window.location.href = "../navbar-page.html";
+  })
+  document.querySelector("#navbar #india").addEventListener("click", () => {
+    localStorage.setItem("newsQuery", JSON.stringify(["India News", "india"]));
+    window.location.href = "../navbar-page.html";
+  })
+  document.querySelector("#navbar #world").addEventListener("click", () => {
+    localStorage.setItem("newsQuery", JSON.stringify(["World News", "world"]));
+    window.location.href = "../navbar-page.html";
+  })
+  document.querySelector("#navbar #offbeat").addEventListener("click", () => {
+    localStorage.setItem("newsQuery", JSON.stringify(["Offbeat News", "offbeat"]));
+    window.location.href = "../navbar-page.html";
+  })
+  document.querySelector("#navbar #science").addEventListener("click", () => {
+    localStorage.setItem("newsQuery", JSON.stringify(["Science News", "science"]));
+    window.location.href = "../navbar-page.html";
+  })
 }
 export { navbar, footer, addFunctionality };
