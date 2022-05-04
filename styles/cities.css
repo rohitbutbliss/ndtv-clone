@@ -1,0 +1,119 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background:transparent; 
+  }
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(140, 129, 129);
+    border-radius: 2.5px; 
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}  
+#cities{
+    /* border: 1px solid black; */
+    width: 960px;
+    /* margin-left: 6%; */
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin: 20px 0 20px 6%;
+}
+#cities > h1{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 900;
+    font-size: 42px;
+    margin: auto 0;
+}
+#cityName{
+    border: 0px solid black;
+    height: 35px;
+    width: 250px;
+    margin: auto 0;
+}
+#cityName > select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid #e2e2e2;
+}
+#container{
+    /* border: 1px solid crimson; */
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6%;
+    padding: 4px;
+    box-sizing: border-box;
+}
+#sidebar{
+    border: 0px solid black;
+    width: 220px;
+    height: max-content;
+}
+#sidebar > h3{
+    text-align: center;
+    /* border: 1px solid gray; */
+    padding: 10px;
+    text-transform:uppercase;
+    font-size: 14px;
+    margin-bottom: 20px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+#resultTrending{
+    border: 0px solid red;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+}
+.trendingBox{
+    display: flex;
+    border-bottom:0px solid green;
+}
+.trendingBox > div:first-child > img{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius:5px;
+}
+.contBox{
+    border: 0px solid blue;
+    height: 70px;
+    overflow-y: scroll;
+    padding-left: 5px;
+}
+#results{
+    /* border: 0.5px solid black; */
+    width: 680px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+hr{
+    border: 1px solid lightgray;
+    border-radius: 0.25px;
+}
+hr:last-child{
+    display: none;
+}
+.trendBox2{
+    display: flex;
+    border: 1px solid lavender;
+    padding: 20px;
+    border-radius: 4px;
+}
+.trendBox2 > p{
+    margin-left: 10px;
+}
