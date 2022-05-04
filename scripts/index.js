@@ -1,3 +1,8 @@
+import {navbar, footer, addFunctionality} from '../components/navbar.js';
+document.getElementById('navbar').innerHTML = navbar();
+document.getElementById('footer').innerHTML = footer();
+addFunctionality();
+
 const data = [
     {
         imageUrl: "https://c.ndtvimg.com/2022-01/o9q0f2bg_sonu-nigam_120x90_05_January_22.jpg?downsize=105:79",
