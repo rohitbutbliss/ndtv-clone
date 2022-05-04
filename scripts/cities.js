@@ -57,7 +57,7 @@ const appendTrending = (value) => {
 };
 
 trending();
-//success trending :D
+
 
 let a;
 document.querySelector("#city").addEventListener("change", function () {
@@ -88,6 +88,7 @@ const trendingSecond = (value) => {
     box.setAttribute("class", "trendBox2");
 
     let img = document.createElement("img");
+    img.setAttribute('class','imgBox2')
     img.src = image_url;
     img.style.height = "108px";
     img.style.width = "144px";
