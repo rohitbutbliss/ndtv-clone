@@ -65,6 +65,8 @@ document.querySelector("#city").addEventListener("change", function () {
   a = document.querySelector("#city").value;
   console.log(a);
 
+  document.getElementById('results').innerHTML = null;
+     
   fetch(
     `https://ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date)`
   )
