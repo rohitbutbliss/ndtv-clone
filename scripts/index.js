@@ -3,7 +3,7 @@
   
 async function check(){
 
-    let res =  await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&q=ndtv&type=video&key=AIzaSyC7WrwNeC5bsLjybGzPY3zxCkDbbBBmql8`)
+ //   let res =  await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=32&q=ndtv&type=video&key=AIzaSyC7WrwNeC5bsLjybGzPY3zxCkDbbBBmql8`)
     
     let data = await res.json()
     
@@ -22,11 +22,17 @@ function append (data){
         let title = document.createElement("p")
         title.innerText = description
 
+
         box.append(image,title)
+        box.addEventListener("click",function (){
+            //localStorage.setItem("store",JSON.stringify(videoId))
+            window.location.href= `https://www.youtube.com/watch?v=${videoId}`
+        })
 
     
 
         document.getElementById("cont").append(box)
+        
 
     })
 }
