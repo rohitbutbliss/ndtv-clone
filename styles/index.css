@@ -39,7 +39,7 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
-img{
+#container img{
     width: 100%;
     margin: 0;
     /* margin-left: 20px; */
@@ -50,6 +50,7 @@ img{
     object-fit: contain;
     /* position: relative; */
 }
+
 .div1>h1{
     background-color: white;
     color: black;
@@ -88,6 +89,9 @@ img{
     /* position: relative; */
     margin: 0;
     background-color: white;
+}
+.div2>div{
+    width: 90%;
 }
 .div2>img{
     width: 100%;
@@ -147,7 +151,7 @@ img{
 .div22>div{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    /* width: 300px; */
 }
 .div22>div>div{
     display: flex;
