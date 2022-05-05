@@ -36,6 +36,10 @@ const appendData = (data) => {
         text_div.style.gap = "10px";
         text_div.append(head, date, desc);
         div.append(img_div, text_div);
+        div.addEventListener("click", () => {
+            localStorage.setItem("newsContent", JSON.stringify({ description, headline, posted_date, image_url }))
+            window.location.href = "../article.html"
+        })
         document.querySelector("#trending-rhs").append(div);
     });
 };
