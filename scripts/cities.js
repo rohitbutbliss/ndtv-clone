@@ -102,7 +102,7 @@ const trendingSecond = (value) => {
 
     let date = document.createElement('p')
     date.setAttribute('class', 'date')
-    date.textContent = `Date: ${posted_date}`;
+    date.textContent = posted_date;
 
     let summary = document.createElement('p')
     summary.textContent = description;
