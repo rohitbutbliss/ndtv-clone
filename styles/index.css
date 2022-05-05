@@ -116,3 +116,57 @@ img{
     font-weight: 800;
     margin: 0;
 }
+.div21{
+    /* font-family: "Roboto"; */
+    margin-top: 15px;
+    display: flex;;
+    gap: 10px;
+    /* padding: 10px; */
+    /* border: 1px solid black; */
+}
+.div21>div{
+    margin: 0;
+    height: auto;
+    width: 280px;
+    /* border: 1px solid black; */
+}
+.div21>div>p{
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+.div21>div>img{
+    margin: 0;
+    border-radius: 3px;
+}
+.div22{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.div22>div{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.div22>div>div{
+    display: flex;
+    box-sizing: border-box;
+}
+.div22>div>div>img{
+    height: 70px;
+    width: 100px;
+    padding: 5px;
+}
+.div22>div>div>p{
+    font-size: 15px;
+    padding: 10px;
+}
+.hrline{
+    width: 90%;
+    color: rgb(206, 206, 206);
+    margin-left: 12px
+}
+.colorwhite{
+    background-color: white;
+}
