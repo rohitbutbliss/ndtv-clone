@@ -10,7 +10,10 @@ const page_data = JSON.parse(localStorage.getItem("newsContent"));
 document.querySelector("#path-text").innerText = page[0].split(" ")[0];
 document.querySelector("#page-content-title").innerText = page_data.headline;
 document.querySelector("#main-title").innerText = page_data.headline;
-document.querySelector("#main-desc").innerText = page_data.description;
+if (page_data.description !== undefined) {
+
+    document.querySelector("#main-desc").innerText = page_data.description;
+}
 
 const article_img = document.createElement("img");
 const article_content = document.createElement("div");

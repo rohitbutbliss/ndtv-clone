@@ -52,7 +52,7 @@ const navbar = () => {
           <li id="india">INDIA</li>
           <li>OPINION</li>
           <li>VIDEO</li>
-          <li>CITIES</li>
+          <li><a href="../cities.html">CITIES</a></li>
           <li id="world">WORLD</li>
           <li id="offbeat">OFFBEAT</li>
           <li>TRENDS</li>

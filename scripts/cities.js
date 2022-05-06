@@ -13,7 +13,7 @@ addFunctionality();
 
 const trending = async () => {
   try {
-    let url ="https://newsapi.org/v2/top-headlines?country=in&apiKey=2e2559eea1d142e5bb73a5e4ed589315";
+    let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=2e2559eea1d142e5bb73a5e4ed589315";
     let response = await fetch(url);
     let data = await response.json();
     let x = data.articles;
@@ -89,6 +89,10 @@ const trendingSecond = (value) => {
     summary.textContent = description;
     contBox.append(title, date, summary);
     box.append(img, contBox);
+    box.addEventListener("click", () => {
+      localStorage.setItem("newsContent", JSON.stringify({ headline, posted_date, image_url, description }))
+      window.location.href = "../article.html"
+    })
     document.querySelector("#results").append(box);
   });
 };
