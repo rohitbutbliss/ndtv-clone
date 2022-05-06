@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+
+    <style>
+      #image{
+        padding: 30px;
+        box-sizing: border-box;
+      }
+      #image  img{
+        border-radius: 20px;
+      }
+      #main{
+        font-family: "Roboto";
+        padding: 30px 0;
+      }
+      #container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-gap: 5px;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        margin:auto;
+        /* overflow-x: scroll;
+        object-fit: cover; */
+      }
+
+      #container > div {
+        height: 100%;
+        /* width: 300px; */
+        background-color: rgb(255, 255, 255, 0.9);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 2px;
+        border-radius: 10px;
+      }
+
+      #container2{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-gap: 5px;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        margin:auto;
+        /* overflow-x: scroll;
+        object-fit: cover; */
+      }
+
+      #container2 > div {
+        height: 100%;
+        /* width: 300px; */
+        background-color: rgb(255, 255, 255, 0.9);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 2px;
+        border-radius: 10px;
+      }
+
+      #container3{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-gap: 5px;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        margin:auto;
+        /* overflow-x: scroll;
+        object-fit: cover; */
+      }
+
+      #container3 > div {
+        height: 100%;
+        /* width: 300px; */
+        background-color: rgb(255, 255, 255, 0.9);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 2px;
+        border-radius: 10px;
+      }
+
+      #container4{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-gap: 5px;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        margin:auto;
+        /* overflow-x: scroll;
+        object-fit: cover; */
+      }
+
+      #container4 > div {
+        height: 100%;
+        /* width: 300px; */
+        background-color: rgb(255, 255, 255, 0.9);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 2px;
+        border-radius: 10px;
+      }
+
+      #container5{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-gap: 5px;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        margin:auto;
+        /* overflow-x: scroll;
+        object-fit: cover; */
+      }
+
+      #container5 > div {
+        height: 100%;
+        /* width: 300px; */
+        background-color: blueviolet;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 2px;
+        border-radius: 10px;
+      }
+      #input {
+        /* margin: auto; */
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        /* margin-right: 40%; */
+        border-radius: 5px;
+        /* padding: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+      }
+      #para > p {
+        /* align-items: center; */
+        text-align: center;
+        color: brown;
+        margin-top: 30px;
+      }
+
+      #paragrapg{
+        padding: 30px;
+        box-sizing: border-box;
+          background-color: rgb(250, 246, 246);
+          /* font-size: 10px; */
+      }
+
+      #paragrapg > p{
+        font-size: 20px;
+      }
+        
+      #paragrapg > h2{
+          margin-top: 20px;
+      }
+      #main #box{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      box-sizing: border-box;
+          }
+
+      #main img {
+        /* margin-left: 20px; */
+        /* width: 80%; */
+        height: 200px;
+        /* margin-right: 20px; */
+        /* margin-top: 20px;  */
+        /* width: 50%; */
+        border-radius: 10px;
+      }
+      #in {
+        width: 49%;
+        /* margin-left: 30%; */
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid black;
+        border-radius: 5px;
+        /* padding: 5px; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #in > input{
+        background-color: transparent;
+        border: none;
+      }
+      #in > input:focus{
+        outline: none;
+      }
+      /* #image>.item{
+            border-radius: 5px;
+        } */
+      img {
+        /* margin-left: 30px;
+            margin-right: 30px; */
+      }
+      #image {
+        overflow: visible;
+        box-sizing: border-box;
+      }
+      
+
+      h3 {
+        /* margin-left: 30px; */
+        padding: 50px;
+        box-sizing: border-box;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="owl-carousel owl-theme" id="image">
+        
+        <div class="item"><img src="https://c.ndtvimg.com/2022-05/l6sro28o_sale_240x180_03_May_22.jpg"></div>
+        <div class="item"><img src="https://c.ndtvimg.com/2022-05/b8ipkqc_electronics_240x180_03_May_22.jpg"></div>
+        <div class="item"><img src="https://c.ndtvimg.com/2022-05/dgttidbg_mobiles_240x180_03_May_22.jpg"></div>
+        <div class="item"><img src="https://c.ndtvimg.com/2022-05/fjkfht5g_fashion_240x180_03_May_22.jpg"></div>
+        <div class="item"> <img src="https://c.ndtvimg.com/2022-05/p99gn6mg_alexa_240x180_03_May_22.jpg"></div>
+
+    </div>
+    <main id="main">
+      <div id="in">
+        <input type="text" id="input" placeholder="Search for any product" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div id="para">
+        <p>
+          Most Searched: Samsung Galaxy M53 5G, iPhone 13, Lenovo Tab P11,
+          Realme Watch 2 Pro, Lenovo
+        
+          Yoga Tab 11, Dell Inspiron <br>14 (5410), Mi 50 Inch Ultra HD TV (4X), 
+          OnePlus 32-Inch Y-Series HD Android TV (32Y1), Realme Pad,<br>
+           Microsoft Xbox Series S, Noise ColorFit Ultra Buzz</p>
+      </div>
+
+      <h3>TOP DEALS</h3>
+      <div id="container"></div>
+
+
+      <h3>HEALTH CARE</h3>
+      <div id="container2"></div>
+
+      <h3>DAILY ESSENTIALS</h3>
+      <div id="container3"></div>
+
+      <h3>MOBILE PHONES</h3>
+      <div id="container4"></div>
+
+      <h3>ELECTRONICS</h3>
+      <div id="container5"></div>
+     
+      <div id="paragrapg">
+          <h2>ONLINE SHOPPING WITH NDTV</h2><br>
+          <p>Welcome to NDTV Shopping, an exclusive website that is dedicated whole-heartedly to making your online shopping experience the best ever. Be it mobile shopping to upgrade your gadget, equipping your kitchen with smart appliances or transforming your fashion wardrobe with the most stylish outfits and accessories, you will find all your needs at our one-stop shopping site. Choose from a wide range of categories like Mobile, Electronics, Lifestyle, Home, Kitchen and more that include products from the top brands across India.</p><br>
+      
+          <p>That's not all. We understand how everyone loves to avail great deals while shopping and so, we are constantly on the search to scoop out the top deals on various products to help you save big when you get down to shopping. You can expect amazing deals, offers and discounts across all categories when you log onto NDTV Shopping. From the latest mobile phones, laptops, televisions, air conditioners, washing machines, microwave ovens, mixer grinders, refrigerators, table lamps, curtains, home decor items, sarees, kurtas, sherwanis, dresses, trousers, lipsticks, foundations, eyeshadow palettes, baby prams, stuffed toys and pillows, there are numerous offers and deals for everyone to avail.</p><br>
+      
+          <p>With a plethora of online shopping sites in India, you may ask what sets NDTV Shopping apart? You can be rest assured that our team of reviewers are always on the lookout for filtering the best of the best products from the sea of offers, and bringing you nothing but the top choices that are available for you. Yes, we do all the groundwork so that you can enjoy a hassle free online shopping experience.
+        </p><br>
+
+        <p>So, what are you waiting for? Get started on your shopping right away!</p>
+        </div>
+
+    </main>
+
+    <div id="footer"></div>
+  </body>
+</html>
+<script type="module">
+  import { navbar, footer, addFunctionality } from "./components/navbar.js";
+  document.querySelector("#navbar").innerHTML = navbar();
+  document.querySelector("#footer").innerHTML = footer();
+  addFunctionality();
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 2,
+      },
+    },
+  });
+
+  var data = [
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-home-kitchen-480_9_1651597770.jpg",
+      name: "Cameras, Tripods, Ring Lights and More ",
+    },
+
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-saleislive-480_1651597183.jpg",
+      name: "Get BlockBuster Deals on Electronics",
+    },
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-gaming-480_2_1651596200.jpg",
+      name: "Up to 70% Discount on Gaming Accessories",
+    },
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-TV-480_1_1651596261.jpg",
+      name: "Top TV Deals to Watch Out For ",
+    },
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-electronics-480_8_1651598620.jpg",
+      name: "Grab Most Affordable Printers and links",
+    },
+   
+     ];
+
+
+
+ var data2=[
+  {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-Hand-washes--sanitizer-480_1651595963.jpg",
+      name: "Handwashes Makes Sanitizers and More",
+    },
+
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-saleislive-480_1651597183.jpg",
+      name: "Get Unbeatable Offers On Everything ",
+    },
+
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-Mask-480_1_1643108135.jpg",
+      name: "Shop Budget N95 & Cloth Masks Online",
+    },
+
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-Hand-Wash-Sanitizers-480_1_1643108648.jpg",
+      name: "Hand care With Sanitizers & Hand Wash",
+    },
+
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-Masks-480_1643628158.jpg",
+      name: "Stay Safe Use Best Masks & Face Shields",
+    },
+  ];
+
+
+  var data3=[
+
+   {
+      image_url: "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-grocery-480_4_1651593612.jpg",
+      name: "Samsang Galaxy M33 %G(Deep Ocean Blue ,6GB 128 Storage)",
+    },
+
+    {
+      image_url: "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-saleislive-480_1651597183.jpg",
+      name: "OnePlus Nord CE 2 5G(Bahamas Blue,6GB RAM, 128GB Storage) ",
+    },
+
+    {
+      image_url: "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-health-wellness-480_1_1651593687.jpg",
+      name: "Redmi Note 11 Pro + 5G(Stealth Black,6GB RAM, 128GB Storage) | 67W",
+    },
+
+    {
+      image_url: "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-Health--nutrition-480_1651593276.jpg",
+      name: "OPPO A15s(Dynamic Black,4Gb Storage)",
+    },
+
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/product/NDTV-Food--Beverages-480_1_1651593405.jpg",
+      name: "iQOO Z5 5G(Arctic Dawn, 8GB RAM 128GB Storage) | Snapdragon 778G 5G...",
+    },
+  ];
+
+
+ var data4=[
+
+  {
+      image_url: "https://m.media-amazon.com/images/I/41q7YUp4H1L._SL160_.jpg",
+      name: "Samsang Galaxy M33 %G(Deep Ocean Blue ,6GB 128 Storage)",
+    },
+
+    {
+      image_url: "https://m.media-amazon.com/images/I/41R9oD3K25L._SL160_.jpg",
+      name: "OnePlus Nord CE 2 5G(Bahamas Blue,6GB RAM, 128GB Storage) ",
+    },
+
+    {
+      image_url: "https://m.media-amazon.com/images/I/41iEZV6nKbL._SL160_.jpg",
+      name: "Redmi Note 11 Pro + 5G(Stealth Black,6GB RAM, 128GB Storage) | 67W",
+    },
+
+    {
+      image_url: "https://m.media-amazon.com/images/I/41pV3dYdczL._SL160_.jpg",
+      name: "OPPO A15s(Dynamic Black,4Gb Storage)",
+    },
+
+    {
+      image_url:
+        "https://m.media-amazon.com/images/I/414wcW-9%20ML._SL160_.jpg",
+      name: "iQOO Z5 5G(Arctic Dawn, 8GB RAM 128GB Storage) | Snapdragon 778G 5G...",
+    },
+  ];
+
+
+  var data5=[
+      
+    {
+      image_url: "https://m.media-amazon.com/images/I/311vdf9eFvL._SL160_.jpg",
+      name: "Portonics Adapto Wall Chanrger",
+    },
+
+    {
+      image_url: "https://m.media-amazon.com/images/I/41LMje35DsL._SL160_.jpg",
+      name: "Portonics AUTO 12 in-Car Blutooth Receiver",
+    },
+
+    {
+      image_url: "https://m.media-amazon.com/images/I/31-dYb3wLfL._SL160_.jpg",
+      name: "WinPlush Stylus Pen for iPad",
+    },
+
+    {
+      image_url: "https://m.media-amazon.com/images/I/31rt5WJ7cMS._SL160_.jpg",
+      name: "Mivi Play Blutooth Speaking with 12 Hours Playtime",
+    },
+
+    {
+      image_url:
+        "https://assets.gadgets360cdn.com/pricee/assets/category/NDTV-Mi-MJSXJ02CM-WiFi-Home-Security-Camera-480_1568108003.jpg",
+      name: "Mi 1080P Home Security Camera",
+    },
+  ];
+  //var data = [];
+
+  //   function displayData(){
+  document.querySelector("#container").innerHTML = "";
+  data.map(function (elem) {
+    var box = document.createElement("div");
+    box.id = "box";
+
+    var img = document.createElement("img");
+    img.src = elem.image_url;
+    img.addEventListener("click",amozone)
+
+    function amozone(){
+      window.open("https://www.amazon.in/b/ref=s9_acss_bw_cg_sbcaugar_3d1_w?node=21943500031&tag=shopping-landing-21&ascsubtag=106014925")
+    }
+
+    var name = document.createElement("p");
+    name.id = "name";
+    name.textContent = elem.name;
+
+    // var btn = document.createElement("button");
+    // btn.innerText = "Add to Cart";
+    // btn.addEventListener("click", function () {
+    //   addToCart(elem);
+    // });
+
+    box.append(img, name);
+
+    document.querySelector("#container").append(box);
+  });
+
+  document.querySelector("#container2").innerHTML = "";
+  data2.map(function (elem) {
+    var box = document.createElement("div");
+    box.id = "box";
+
+    var img = document.createElement("img");
+    img.src = elem.image_url;
+
+    img.addEventListener("click",amozone)
+
+function amozone(){
+  window.open("https://www.amazon.in/s?k=mask%2C+detool&crid=3OP4NORM2901B&sprefix=mask%2C+detool%2Caps%2C392&ref=nb_sb_noss")
+}
+
+    var name = document.createElement("p");
+    name.id = "name";
+    name.textContent = elem.name;
+
+    // var btn = document.createElement("button");
+    // btn.innerText = "Add to Cart";
+    // btn.addEventListener("click", function () {
+    //   addToCart(elem);
+    // });
+
+    box.append(img, name);
+
+    document.querySelector("#container2").append(box);
+  });
+
+  document.querySelector("#container3").innerHTML = "";
+  data3.map(function (elem) {
+    var box = document.createElement("div");
+    box.id = "box";
+
+    var img = document.createElement("img");
+    img.src = elem.image_url;
+
+    img.addEventListener("click",amozone)
+
+function amozone(){
+  window.open("https://www.amazon.in/s?k=DAILY+ESSENTIALS&crid=P1Y65ACN7VUQ&sprefix=daily+essentials%2Caps%2C1222&ref=nb_sb_noss_1")
+}
+
+    var name = document.createElement("p");
+    name.id = "name";
+    name.textContent = elem.name;
+
+    // var btn = document.createElement("button");
+    // btn.innerText = "Add to Cart";
+    // btn.addEventListener("click", function () {
+    //   addToCart(elem);
+    // });
+
+    box.append(img, name);
+
+    document.querySelector("#container3").append(box);
+  });
+
+  document.querySelector("#container4").innerHTML = "";
+  data4.map(function (elem) {
+    var box = document.createElement("div");
+    box.id = "box";
+
+    var img = document.createElement("img");
+    img.src = elem.image_url;
+
+    img.addEventListener("click",amozone)
+
+function amozone(){
+  window.open("https://www.amazon.in/s?k=mobile&crid=1H547WTNH3RH2&sprefix=mo%2Caps%2C464&ref=nb_sb_ss_ts-doa-p_2_2")
+}
+
+    var name = document.createElement("p");
+    name.id = "name";
+    name.textContent = elem.name;
+
+    // var btn = document.createElement("button");
+    // btn.innerText = "Add to Cart";
+    // btn.addEventListener("click", function () {
+    //   addToCart(elem);
+    // });
+
+    box.append(img, name);
+
+    document.querySelector("#container4").append(box);
+  });
+
+  document.querySelector("#container5").innerHTML = "";
+  data5.map(function (elem) {
+    var box = document.createElement("div");
+    box.id = "box";
+
+    var img = document.createElement("img");
+    img.src = elem.image_url;
+
+    img.addEventListener("click",amozone)
+
+function amozone(){
+  window.open("https://www.amazon.in/s?k=charger%2Cspeaker+%2C+camera&crid=29K4P9AQMAUSY&sprefix=charger%2Cspeaker+%2C+camer%2Caps%2C377&ref=nb_sb_noss_2")
+}
+
+    var name = document.createElement("p");
+    name.id = "name";
+    name.textContent = elem.name;
+
+    // var btn = document.createElement("button");
+    // btn.innerText = "Add to Cart";
+    // btn.addEventListener("click", function () {
+    //   addToCart(elem);
+    // });
+
+    box.append(img, name);
+
+    document.querySelector("#container5").append(box);
+  });
+
+</script>
