@@ -1,5 +1,5 @@
 const navbar = () => {
-    return `<div id="logo">
+  return `<div id="logo">
     <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -51,7 +51,7 @@ const navbar = () => {
           <li>COVID</li>
           <li id="india">INDIA</li>
           <li>OPINION</li>
-          <li>VIDEO</li>
+          <li><a href="../video.html">VIDEO</a></li>
           <li><a href="../cities.html">CITIES</a></li>
           <li id="world">WORLD</li>
           <li id="offbeat">OFFBEAT</li>
