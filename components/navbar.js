@@ -67,7 +67,7 @@ const navbar = () => {
           <li>WEATHER</li>
           <li>TV SCHEDULE</li>
           <li>TRAINS</li>
-          <li>SHOPPING</li>
+          <li><a href="../shopping.html">SHOPPING</a></li>
         </ul>
       </div><span class="material-symbols-outlined" id="three-dots">
           more_horiz
