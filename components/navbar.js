@@ -1,6 +1,6 @@
 const navbar = () => {
   return `<div id="logo">
-        <svg
+    <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           width="120px"
@@ -51,8 +51,8 @@ const navbar = () => {
           <li>COVID</li>
           <li id="india">INDIA</li>
           <li>OPINION</li>
-          <li>VIDEO</li>
-          <li>CITIES</li>
+          <li><a href="../video.html">VIDEO</a></li>
+          <li><a href="../cities.html">CITIES</a></li>
           <li id="world">WORLD</li>
           <li id="offbeat">OFFBEAT</li>
           <li>TRENDS</li>
@@ -67,6 +67,7 @@ const navbar = () => {
           <li>WEATHER</li>
           <li>TV SCHEDULE</li>
           <li>TRAINS</li>
+          <li><a href="../shopping.html">SHOPPING</a></li>
         </ul>
       </div><span class="material-symbols-outlined" id="three-dots">
           more_horiz

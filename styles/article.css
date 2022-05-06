@@ -25,6 +25,19 @@
   top: 0px;
   right: -4px;
 }
+#path-text::after {
+  display: inline-block;
+  content: "";
+  margin: 0 15px 0 4px;
+  border: solid #2e2e2e;
+  border-width: 0 1px 1px 0;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  position: relative;
+  top: 0px;
+  right: -4px;
+}
 #container a {
   text-decoration: none;
 }
@@ -73,6 +86,9 @@
   border-radius: 4px;
   margin-right: 10px;
 }
+#main-desc {
+  font-size: 20px;
+}
 .trending-title {
   font-size: 14px;
   font-weight: 500;
@@ -95,7 +111,11 @@
   flex-direction: column;
   gap: 30px;
 }
-
-#trending-rhs > div:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+#article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#article-content > p {
+  line-height: 29px;
 }
