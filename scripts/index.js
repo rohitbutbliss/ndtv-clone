@@ -66,4 +66,16 @@ data.forEach((el)=>{
 
     box.append(image, title);
     document.getElementById('fetchData').append(box);
-})
+});
+
+// const covidData = async () => {
+    const url = "https://corona.lmao.ninja/v2/countries/india";
+    try{
+        let res = await fetch(url);
+        let data2 = res.json();
+        console.log('data:', data2);
+    }
+    catch(err){
+        console.log('err:', err);
+    }
+// }

@@ -1,0 +1,252 @@
+* {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(231, 230, 230);
+}
+#container > div {
+  height: auto;
+}
+#container > #div1 {
+  /* border: 1px solid black; */
+  /* height: 500px; */
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#container > #div2 {
+  /* border: 1px solid black; */
+  /* height: 500px; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#container > #div3 {
+  /* border: 1px solid black; */
+  /* height: 500px; */
+  width: 25%;
+}
+#container {
+  font-family: "Roboto";
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#container img {
+  width: 100%;
+  margin: 0;
+  /* margin-left: 20px; */
+  text-align: center;
+}
+.img {
+  height: 150px;
+  object-fit: contain;
+  /* position: relative; */
+}
+.div1 > h1 {
+  background-color: white;
+  color: black;
+  font-size: larger;
+  text-align: start;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  /* margin-left: 20px; */
+  margin-bottom: 0;
+}
+.div1 {
+  /* width: 90%; */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  /* position: absolute; */
+  font-size: 10px;
+  /* width: 22%; */
+  /* margin-left: 20px; */
+  background-color: white;
+  color: black;
+  /* margin-top: 20px; */
+  padding: 5px;
+}
+.title > h2 {
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.div2 {
+  width: 90%;
+  /* position: relative; */
+  margin: 0;
+  background-color: white;
+}
+.div2 > img {
+  width: 100%;
+  /* height: 351px; */
+  aspect-ratio: 570/351;
+  /* margin-top: 10px; */
+  margin-bottom: 0;
+}
+.div2 > h2 {
+  /* position: absolute; */
+  /* width: 91.30%; */
+  /* background-color: white; */
+  color: black;
+  /* margin-top: 0; */
+  padding: 5px;
+  /* margin-left: 20px; */
+  text-align: center;
+}
+#div2 > div {
+  width: 90%;
+}
+.f1 {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+}
+.para1 {
+  font-size: larger;
+  font-weight: 800;
+  margin: 0;
+}
+.div21 {
+  /* font-family: "Roboto"; */
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  /* padding: 10px; */
+  /* border: 1px solid black; */
+}
+.div21 > div {
+  margin: 0;
+  height: auto;
+  width: 280px;
+  /* border: 1px solid black; */
+}
+.div21 > div > p {
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+.div21 > div > img {
+  margin: 0;
+  border-radius: 3px;
+}
+.div22 {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.div22 > div {
+  display: flex;
+  flex-direction: column;
+  /* width: 300px; */
+}
+.div22 > div > div {
+  display: flex;
+  box-sizing: border-box;
+  padding: 5px 0;
+  font-size: 15px;
+  font-weight: 500;
+  gap: 5px;
+}
+.div22 > div > div > img {
+  /* height: 70px; */
+  width: 100px;
+  /* padding: 5px; */
+}
+.div22 > div > div > p {
+  font-size: 15px;
+  /* padding: 15px; */
+}
+.hrline {
+  width: 90%;
+  color: rgb(206, 206, 206);
+  margin-left: 12px;
+}
+.colorwhite {
+    width: 60%;
+  background-color: white;
+  padding: 10px;
+}
+#container .imageR{
+    width: 100px;
+    border-radius: 10px;
+    
+}
+.kejrival img{
+  width:100%;
+  height:100%;
+  /* background-color:#000;
+  opacity:0.5 */
+  /* -webkit-box-shadow: -2px -1px 15px 7px rgba(0,0,0,0.5);
+  -moz-box-shadow: -3px -2px 30px 14px rgba(0,0,0,0.425);
+  box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35); */
+}
+/* #div3{
+  border: 1px solid black;
+} */
+#div23{
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  /* border: 1px solid black; */
+}
+#div23 div{
+  /* margin: auto; */
+  /* padding: 10px; */
+  padding-right: 20px;
+  /* box-sizing: border-box; */
+  /* border: 1px solid red; */
+  height: auto;
+  width: 30%;
+}
+#div23 div img{
+  border-radius: 5px;
+}
+
+#sectiontwo{
+  display: flex;
+  /* gap: 20px; */
+  padding: 20px;
+}
+#sectiontwo div{
+  height: 150px;
+  /* width: 50%; */
+  padding: 20px;
+  border: 1px solid black;
+  /* background-color: black; */
+}
+.section1{
+  width: 75%;
+}
+.section2{
+  width: 25%;
+}
+/* .openion_opt{
+  background-color: #fff;
+  width: 100%;
+  float: left;
+  padding: 10px 15px;
+  margin: 18px 0 0;
+  box-sizing: border-box;
+}
+.section_head{
+  width: 100%;
+  float: left;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+} */
