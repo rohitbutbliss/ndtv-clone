@@ -11,7 +11,7 @@ h1 {
   font-family: "Roboto";
 }
 
-#container >h1{
+#container > h1 {
   margin-bottom: 30px;
 }
 
@@ -34,6 +34,10 @@ h1 {
   border-radius: 5px;
   padding: 20px;
   box-sizing: border-box;
+}
+
+#show_article > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #show_article > :nth-child(even) {
@@ -109,4 +113,22 @@ h1 {
   color: rgb(20, 133, 203);
   text-decoration: underline;
 }
-/* sanduio */
+
+.social {
+  display: flex;
+ 
+
+  box-sizing: border-box;
+}
+
+.social svg {
+  margin-left: 25px;
+  color: darkgrey;
+}
+
+.social svg path{
+  fill: rgb(120, 110, 110);
+}
+.social svg path:hover{
+  cursor: pointer;
+}
