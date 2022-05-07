@@ -44,7 +44,7 @@ const append = (article) => {
       descriptions.innerText = description;
 
       let posted_dates = document.createElement("p");
-      posted_dates.innerText = "Updated: May 3,2022";
+      posted_dates.innerText = "Updated: May 6,2022";
       posted_dates.class = "update";
 
       let horizontal = document.createElement("hr");
@@ -94,12 +94,9 @@ const append = (article) => {
       div.append(image);
       div2.append(div, div1);
       show_articles.append(div2);
-      headlines.addEventListener("click", function () {
-        console.log("hii");
+     
         //startvideo(frame);
       });
     }
-  );
-};
-
+  
 append(news);

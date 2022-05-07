@@ -4,9 +4,8 @@ h1 {
 }
 
 #container {
-  /* border: 1px solid black; */
   margin-top: 70px;
-  /* height: 5680px; */
+
   margin-bottom: 70px;
   font-family: "Roboto";
 }
@@ -116,7 +115,6 @@ h1 {
 
 .social {
   display: flex;
- 
 
   box-sizing: border-box;
 }
@@ -126,9 +124,9 @@ h1 {
   color: darkgrey;
 }
 
-.social svg path{
+.social svg path {
   fill: rgb(120, 110, 110);
 }
-.social svg path:hover{
+.social svg path:hover {
   cursor: pointer;
 }
