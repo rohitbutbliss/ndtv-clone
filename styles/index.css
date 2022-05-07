@@ -281,3 +281,29 @@ body {
   display: flex;
   width: 90%;
 }
+
+#sec4{
+  display: none;
+}
+
+/* Responsive */
+@media screen and (min-width:381px) and (max-width:720px) {
+  #sec4{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    padding: 10px;
+  }
+  #sec4 div img{
+    width: 100%;
+  }
+  #sec4 div p{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+  }
+  #container, #sectiontwo, #section3{
+    display: none;
+  }
+}
