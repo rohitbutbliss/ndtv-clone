@@ -55,7 +55,7 @@ const navbar = () => {
           <li><a href="../cities.html">CITIES</a></li>
           <li id="world">WORLD</li>
           <li id="offbeat">OFFBEAT</li>
-          <li>TRENDS</li>
+          <li><a href="../trend.html">TRENDS</a></li>
           <li>PHOTOS</li>
         </ul>
         <ul id="hide" class="show">
