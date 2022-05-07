@@ -218,35 +218,69 @@ body {
   display: flex;
   /* gap: 20px; */
   padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Roboto';
 }
 #sectiontwo div{
-  height: 150px;
-  /* width: 50%; */
-  padding: 20px;
-  border: 1px solid black;
-  /* background-color: black; */
+  height: auto;
+  padding-bottom: 10px;
 }
 .section1{
   width: 75%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-left: 10px;
 }
 .section2{
   width: 25%;
 }
-/* .openion_opt{
-  background-color: #fff;
-  width: 100%;
-  float: left;
-  padding: 10px 15px;
-  margin: 18px 0 0;
-  box-sizing: border-box;
+.opinion{
+  display: flex;
+  justify-content: space-between;
 }
-.section_head{
-  width: 100%;
-  float: left;
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-} */
+.opinion p{
+  padding: 10px;
+  font-weight: 600;
+}
+
+.opinion2{
+  display: flex;
+  /* flex-direction: column; */
+}
+.opinion2 > div{
+  /* border: 1px solid black; */
+  /* width: 150px; */
+  display: flex;
+}
+.bline{
+  border-right: 1px solid grey;
+}
+.opinion2 > div > img{
+  height: 80px;
+  width: 150px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.opinion2 div p{
+  padding: 5px;
+}
+#section3{
+  font-family: 'Roboto';
+  margin-left: 27px;
+  width: 90%;
+}
+.trend{
+  background-color: black;
+  color: white;
+  width: 6%;
+  padding: 3px;
+  border-radius: 3px;
+
+}
+.sec3data{
+  display: flex;
+  width: 90%;
+}

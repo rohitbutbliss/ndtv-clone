@@ -69,13 +69,62 @@ data.forEach((el)=>{
 });
 
 // const covidData = async () => {
-    const url = "https://corona.lmao.ninja/v2/countries/india";
-    try{
-        let res = await fetch(url);
-        let data2 = res.json();
-        console.log('data:', data2);
-    }
-    catch(err){
-        console.log('err:', err);
-    }
+    // const url = "https://corona.lmao.ninja/v2/countries/india";
+    // try{
+    //     let res = await fetch(url);
+    //     let data2 = res.json();
+    //     console.log('data:', data2);
+    // }
+    // catch(err){
+    //     console.log('err:', err);
+    // }
 // }
+
+const section3Data = [
+    {
+        imgUrl: "https://c.ndtvimg.com/2022-03/r8o6cp08_owaisi-mayawati_120x90_11_March_22.jpg",
+        title: 'We Dont Stand With Murderers: Asaduddin Owaisi On Hyderabad Killing',
+    },
+    {
+        imgUrl: "https://c.ndtvimg.com/2022-05/tokdmt1o_delhi-bjp-leader-tajinder-baggapti_120x90_07_May_22.jpg",
+        title: 'BJPs Tajinder Bagga Back Home, Delhi Police To Provide Security: 10 Facts',
+    },
+    {
+        imgUrl: "https://c.ndtvimg.com/2022-05/n7pa92a_amit-shah-dinner-with-sourav-ganguly-ndtv-240_240x180_07_May_22.jpg",
+        title: 'Sourav Ganguly Hosts Amit Shah For Dinner',
+    },
+    {
+        imgUrl: "https://c.ndtvimg.com/2022-05/hoa1vna_zaheer_120x90_06_May_22.jpg",
+        title: 'Asked If He Is Dating Sonakshi, Zaheer Reveals Advice From Salman Khan',
+    },
+    {
+        imgUrl: "https://c.ndtvimg.com/2022-05/df8tcq0g_dwayne-bravo-virat-kohli-bcciipl_625x300_06_May_22.jpg?im=FeatureCrop,algorithm=dnn,width=240,height=180",
+        title: 'Numbers Dont Lie: Dwayne Bravos Post On Virat Kohli Goes Viral',
+    },
+    {
+        imgUrl: "https://c.ndtvimg.com/2022-05/0n1ovljo_kapil-sharma_120x90_06_May_22.jpg",
+        title: 'Kapil Sharmas "Dream Comes True" As He Meets The "Legend" Kamal Haasan',
+    },
+];
+
+section3Data.forEach((el) => {
+    let box = document.createElement('div');
+    box.style.backgroundColor = 'white';
+
+    let image = document.createElement('img');
+    image.src = el.imgUrl;
+    image.style.height = "200px";
+    image.style.width = "220px";
+    image.style.padding = "10px";
+    image.style.boxSizing = "border-box";
+
+    let title = document.createElement('p');
+    title.innerText = el.title;
+    title.style.padding = "5px";
+    title.style.fontSize = "15px";
+    title.style.fontWeight = "500";
+
+    box.append(image,title);
+
+    document.querySelector('.sec3data').append(box);
+});
