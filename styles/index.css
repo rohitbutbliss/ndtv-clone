@@ -287,18 +287,23 @@ body {
 }
 
 /* Responsive */
-@media screen and (min-width:381px) and (max-width:720px) {
+@media screen and (min-width:381px) and (max-width:920px) {
   #sec4{
     display: flex;
     flex-direction: column;
     margin: auto;
     justify-content: center;
     padding: 10px;
+    width: 300px;
   }
-  #sec4 div img{
+  #sec4 div{
     width: 100%;
   }
+  #sec4 div img{
+    width: 300px;
+  }
   #sec4 div p{
+    width: 300px;
     font-weight: 600;
     font-size: 20px;
     text-align: center;
