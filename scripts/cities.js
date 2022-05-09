@@ -54,7 +54,7 @@ document.querySelector("#city").addEventListener("change", function () {
   a = document.querySelector("#city").value;
   console.log(a);
   document.getElementById("results").innerHTML = null;
-  const req = new Request(`https://cors-anywhere.herokuapp.com/ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date,description)`, {
+  const req = new Request(`https://ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date,description)`, {
     method: 'GET',
     headers: {
       "Access-Control-Allow-Origin": "*"
