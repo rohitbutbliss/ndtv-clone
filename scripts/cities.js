@@ -55,7 +55,7 @@ document.querySelector("#city").addEventListener("change", function () {
   console.log(a);
   document.getElementById("results").innerHTML = null;
   fetch(
-    `https://ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date,description)`
+    `https://cors-anywhere.herokuapp.com/ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date,description)`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -100,7 +100,7 @@ const trendingSecond = (value) => {
 //default data display
 
 fetch(
-  "https://ndtvnews-api.herokuapp.com/cities?city=values(delhi)&field=values(headline,image_url,posted_date)"
+  "https://cors-anywhere.herokuapp.com/ndtvnews-api.herokuapp.com/cities?city=values(delhi)&field=values(headline,image_url,posted_date)"
 )
   .then((response) => response.json())
   .then((data) => {

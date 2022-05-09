@@ -47,7 +47,7 @@ const fetchNews = async () => {
     const value = JSON.parse(localStorage.getItem("newsQuery"));
     document.querySelector("#path-text").innerText = value[0];
     document.querySelector("#main-title").innerText = value[0];
-    const url = `https://ndtvnews-api.herokuapp.com/general?category=values(${value[1]})&field=values(headline,description,url,image_url,posted_date)`;
+    const url = `https://cors-anywhere.herokuapp.com/ndtvnews-api.herokuapp.com/general?category=values(${value[1]})&field=values(headline,description,url,image_url,posted_date)`;
     const res = await fetch(url);
     const data = await res.json();
     console.log(data.news[0].articles);
