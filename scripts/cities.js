@@ -54,9 +54,13 @@ document.querySelector("#city").addEventListener("change", function () {
   a = document.querySelector("#city").value;
   console.log(a);
   document.getElementById("results").innerHTML = null;
-  fetch(
-    `https://cors-anywhere.herokuapp.com/ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date,description)`
-  )
+  const req = new Request(`https://cors-anywhere.herokuapp.com/ndtvnews-api.herokuapp.com/cities?city=values(${a})&field=values(headline,image_url,posted_date,description)`, {
+    method: 'GET',
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    },
+  })
+  fetch(req)
     .then((response) => response.json())
     .then((data) => {
       let x = data.news[0].articles;
@@ -98,10 +102,13 @@ const trendingSecond = (value) => {
 };
 
 //default data display
-
-fetch(
-  "https://cors-anywhere.herokuapp.com/ndtvnews-api.herokuapp.com/cities?city=values(delhi)&field=values(headline,image_url,posted_date)"
-)
+const req = new Request("https://ndtvnews-api.herokuapp.com/cities?city=values(delhi)&field=values(headline,image_url,posted_date)", {
+  method: 'GET',
+  headers: {
+    "Access-Control-Allow-Origin": "*"
+  },
+})
+fetch(req)
   .then((response) => response.json())
   .then((data) => {
     let x = data.news[0].articles;
