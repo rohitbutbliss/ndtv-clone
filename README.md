@@ -11,7 +11,7 @@ New Delhi Television Ltd is an Indian news media company focusing on broadcast a
  - [Shashank Dubey](https://github.com/shashankdofficial)
  - [Juli Kumari](https://github.com/Julikumari048)
  - [Rudra Tiwari](https://github.com/nauts06)
- -[Sandip Suryawanshi](https://github.com/Sandipgit2999)
+ - [Sandip Suryawanshi](https://github.com/Sandipgit2999)
 
  # Tech Stack used :
  - HTML
